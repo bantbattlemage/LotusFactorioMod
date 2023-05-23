@@ -8,9 +8,10 @@
   "dependencies": [
     "base >= 1.1",
     "cargo-ships",
-    "islands_world",
     "rso-mod",
     "Aircraft",
-    "AircraftRealism"
+    "AircraftRealism",
+    "KS_Power",
+    "SchallOilFuel"
   ]
 }
