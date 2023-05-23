@@ -1,5 +1,3 @@
-require "__lotus-mod__/prototypes/rso-mod"
-
 data.raw["int-setting"]["rso-region-size"].default_value = 16
 data.raw["double-setting"]["rso-starting-richness-mult"].default_value = 2
 data.raw["bool-setting"]["rso-oil-in-start-area"].default_value = false

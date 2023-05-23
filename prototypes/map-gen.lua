@@ -1,5 +1,3 @@
--- Code taken from IslandStart mod by Yehn, which was itself taken from vanilla
--- Modified by Xorimuth in many places, and not in a particularly understandable way for anyone else other than me...
 
 --- Lotus Mod Values
 
@@ -10,9 +8,6 @@ local water_level = -80 --- default value -60, lower value is more water. 0 is c
 data.raw["map-gen-presets"]["default"]["lotus_island"] = {
   order = ".1",
   basic_settings = {
-    autoplace_controls = {
-      ["deep_oil"] = { frequency = 1 }
-    },
     terrain_segmentation = 0.75,  -- Inverse of Water Scale
     water = 1.33,  -- Water Coverage
     property_expression_names = {
@@ -27,6 +22,10 @@ data.raw["map-gen-presets"]["default"]["lotus_island"] = {
 }
 
 --- end Lotus mod values
+-- Below code taken from Freight Forwarding and modified slightly 
+
+-- Code taken from IslandStart mod by Yehn, which was itself taken from vanilla
+-- Modified by Xorimuth in many places, and not in a particularly understandable way for anyone else other than me...
 
 local noise = require("noise")
 local util = require("util")
