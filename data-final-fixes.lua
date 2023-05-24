@@ -89,10 +89,10 @@ end
 --- diesel fuel is rebalanced to be intended to have better energy storage than rocket fuel to encourage use in vehicles, but lacks the extra speed bonus rocket fuel has.
 --- nuclear fuel has spent fuel cells added as burnt result, but is otherwise left the same (is better than diesel fuel)
 --- AAI processed fuel is disabled by default as it doesn't have spent fuel while the barrel use in diesel is intended as an additiona logistic need. AAI fuel can simply be enabled in the settings if desired
---- 1 stack of Solid Fuel = 600 MJ
---- 1 stack of Rocket Fuel = 1000 MJ
---- 1 stack of Diesel Fuel Barrel = 1150 MJ
---- 1 stack of Nuclear Fuel = 1210 MJ (and much better speed/acceleration than Diesel Fuel. vanilla values for Nuclear Fuel other than outputting a spent fuel cell)
+---1 stack of Solid Fuel = 600 MJ
+---1 stack of Rocket Fuel = 1000 MJ
+---1 stack of Diesel Fuel Barrel = 1150 MJ and same speed/acceleration properties as Rocket Fuel, but with Empty Barrels as spent fuel.
+---1 stack of Nuclear Fuel = 1210 MJ + Better speed/acceleration than Diesel Fuel (vanilla energy & speed/acceleration values).
 
 new_fuel = {
 
@@ -101,8 +101,8 @@ new_fuel = {
     fuel_emissions_multiplier = 0.75,
     common = {
       fuel_category = "chemical",
-      fuel_acceleration_multiplier = 1.5,
-      fuel_top_speed_multiplier = 1.1,
+      fuel_acceleration_multiplier = 1.8,
+      fuel_top_speed_multiplier = 1.15,
     },
     fluid = { name = "diesel-fuel" },
     item = { name = "diesel-fuel-barrel", barrel_volume = 50, burnt_result = "empty-barrel"},
