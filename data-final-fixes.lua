@@ -1,3 +1,4 @@
+--- add autoplace control for offshore oil
 data:extend({
 	{
         type = "autoplace-control",
@@ -11,7 +12,44 @@ data:extend({
 	},
 })
 
---- re-call SchallOilFuel function to add KS Power Diesel Fuel as burnable barrel fuel. below code is almost all just SchallOilFuel, calling to add properties to planes which are ignored by the default "chemical" fuel category check
+-- add blue science requirement to the large boats
+data.raw["technology"]["cargo_ships"].unit = {
+    count = 150,
+    ingredients = {
+      {"chemical-science-pack", 1},
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+    },
+    time = 30
+}
+
+data.raw["technology"]["tank_ship"].unit = {
+    count = 150,
+    ingredients = {
+      {"chemical-science-pack", 1},
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+    },
+    time = 30
+}
+
+-- setting addded for cargo ship inventory size (left at default value)
+local cargo_capacity = settings.startup["cargo_ship_capacity"].value
+local tanker_capacity = settings.startup["tanker_ship_capacity"].value * 1000
+
+data.raw["cargo-wagon"]["cargo_ship"].inventory_size = cargo_capacity
+data.raw["fluid-wagon"]["oil_tanker"].inventory_size = tanker_capacity
+
+-- Hide floating pole (copied from Freight Forwarding)
+table.insert(data.raw["electric-pole"]["floating-electric-pole"].flags, "hidden")
+table.insert(data.raw["item"]["floating-electric-pole"].flags, "hidden")
+data.raw["recipe"]["floating-electric-pole"].hidden = true
+data.raw["technology"]["oversea-energy-distribution"].hidden = true
+
+--  add spent fuel cell to nuclear fuel
+data.raw["item"]["nuclear-fuel"].burnt_result = "used-up-uranium-fuel-cell"
+
+--- integration of Schall Oil Fuel with KS Power (mostly functions lifted from SOF that had to be copied to be called here as they arent global)
 
 local OFlib = require("__SchallOilFuel__.lib.OFlib")
 local cfg1 = require("__SchallOilFuel__.config.config-1")
@@ -42,18 +80,24 @@ local function fuel_settings_apply(name, specs)
       if cfg1.fuel_PU_rebalance then item.fuel_emissions_multiplier = specs.fuel_emissions_multiplier or 1 end
       if specs.item.burnt_result then
         item.burnt_result = specs.item.burnt_result
-        -- item.localised_description = OFlib.fuel_localised_description(specs.item.burnt_result)
+        --item.localised_description = OFlib.fuel_localised_description(specs.item.burnt_result)
       end
     end
   end
 end
 
---- diesel fuel is rebalanced to be intended to have better energy storage than rocket fuel to encourage use in vehicles, but lacks the extra speed bonus rocket fuel has. nuclear fuel is just better still
+--- diesel fuel is rebalanced to be intended to have better energy storage than rocket fuel to encourage use in vehicles, but lacks the extra speed bonus rocket fuel has.
+--- nuclear fuel has spent fuel cells added as burnt result, but is otherwise left the same (is better than diesel fuel)
 --- AAI processed fuel is disabled by default as it doesn't have spent fuel while the barrel use in diesel is intended as an additiona logistic need. AAI fuel can simply be enabled in the settings if desired
+--- 1 stack of Solid Fuel = 600 MJ
+--- 1 stack of Rocket Fuel = 1000 MJ
+--- 1 stack of Diesel Fuel Barrel = 1150 MJ
+--- 1 stack of Nuclear Fuel = 1210 MJ (and much better speed/acceleration than Diesel Fuel. vanilla values for Nuclear Fuel other than outputting a spent fuel cell)
+
 new_fuel = {
 
    ["diesel-fuel"] = {
-    fuel_value = "4MJ",
+    fuel_value = "2.3MJ",
     fuel_emissions_multiplier = 0.75,
     common = {
       fuel_category = "chemical",
@@ -70,10 +114,6 @@ for name, specs in pairs(new_fuel) do
   fuel_settings_apply(name, specs)
 end
 
-for name, specs in pairs(new_fuel) do
-  fuel_settings_apply(name, specs)
-end
-
 --  apply burner inventory to all cars (because planes get ignored by a check in SOF)
 for name, v2 in pairs(dr["car"]) do
   local burner = v2.burner or v2.energy_source
@@ -81,36 +121,3 @@ for name, v2 in pairs(dr["car"]) do
     burner.burnt_inventory_size = burner.fuel_inventory_size
   end
 end
-
--- add blue science requirement to the large boats
-data.raw["technology"]["cargo_ships"].unit = {
-    count = 150,
-    ingredients = {
-      {"chemical-science-pack", 1},
-      {"automation-science-pack", 1},
-      {"logistic-science-pack", 1},
-    },
-    time = 30
-}
-
-data.raw["technology"]["tank_ship"].unit = {
-    count = 150,
-    ingredients = {
-      {"chemical-science-pack", 1},
-      {"automation-science-pack", 1},
-      {"logistic-science-pack", 1},
-    },
-    time = 30
-}
-
-local cargo_capacity = settings.startup["cargo_ship_capacity"].value
-local tanker_capacity = settings.startup["tanker_ship_capacity"].value * 1000
-
-data.raw["cargo-wagon"]["cargo_ship"].inventory_size = cargo_capacity
-data.raw["fluid-wagon"]["oil_tanker"].inventory_size = tanker_capacity
-
--- Hide floating pole (copied from Freight Forwarding)
-table.insert(data.raw["electric-pole"]["floating-electric-pole"].flags, "hidden")
-table.insert(data.raw["item"]["floating-electric-pole"].flags, "hidden")
-data.raw["recipe"]["floating-electric-pole"].hidden = true
-data.raw["technology"]["oversea-energy-distribution"].hidden = true
