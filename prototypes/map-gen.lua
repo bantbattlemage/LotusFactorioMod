@@ -4,12 +4,15 @@
 local island_scale = 10 --- default value is 1.7 * 15 for some reason
 local island_frequency = 1 --- default value 2
 local water_level = -80 --- default value -60, lower value is more water. 0 is ceiling for no water
+local empty_radius = 300 --- default value 700. radius around starting island that generation will avoid placing land. made lower because starting island is made much smaller, and water level is higher.
+
 
 data.raw["map-gen-presets"]["default"]["lotus_island"] = {
   order = ".1",
   basic_settings = {
     terrain_segmentation = 0.75,  -- Inverse of Water Scale
     water = 1.33,  -- Water Coverage
+
     property_expression_names = {
       elevation = "lotus_island_world",
     },
@@ -279,7 +282,7 @@ local function IS_make_lakes(x, y, tile, map, options)
   local starting_plateau = starting_plateau_basis + starting_plateau_bias + map.finite_water_level * IS_wlc_mult - tile.distance / (island_scale)
 
   -- Set elevation to -4.5 in a radius around the center so that any generated continents don't merge with the starting island.
-  local empty_radius = 700
+
   local avoid_starting_island = function(dist)
     return noise.clamp((dist - empty_radius) / (empty_radius + 400), 0, 1) ^ 3
   end
