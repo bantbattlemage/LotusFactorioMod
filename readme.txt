@@ -6,10 +6,12 @@ Use vehicle based logistics from AAI Programmable Vehicles to exploit island res
 Unlock Chemical Science with the very limited amount of oil provided by Crude Oil patches on land (roughly 20% what you'd find in vanilla).
 Unlock Offshore Oil Rigs to exploit very rich Offshore Oil deposits and huge Cargo Ships to transport bulk goods.
 Unlock automatable Airplanes to cross the vast distances between islands at a much faster speed, but with far less cargo space than ships.
-Furhter refine oil and diversify the options with oil power with KS Powr and Schall Oil Fuel. Fuel your ships, planes, trucks, and trains with efficient refined Diesel Fuel, but the barrel it is stored i in is output as spent fuel.
+Refine oil into Diesel Fuel, and used it to power your generators and your vehicles before obtaining nuclear power. Fuel your hungry ships, planes, trucks, and trains with efficient refined Diesel Fuel, but the barrel it is stored in is output as spent fuel.
 Finally, unlock the Ballistic Missile Silo to exterminate island natives from afar.
 
 Integrated Mods with changes made:
+
+Advanced Autonomous Industries is fully enabled as dependencies but no changes have been made to it. Everything this fantastic set of mods does plays into what this modpack is trying to do. The only slight change is the Fuel Processing from AAI is set to be disabled by default, as this modpack intends you to use Diesel Fuel for your vehicles before getting Nuclear Fuel.
 
 Cargo Ships: Ships & Offshore Oil
 -Offshore power poles are disabled.
@@ -21,9 +23,8 @@ Resource Generation Overhaul: Balancing Resource Distribution
 -Settings are customized to make sure islands aren't overly abundant/diverse with resources or overly barren.
 -Oil in the starting area is disabled.
 
-Diesel Fuel and additional options with Oil:
-KS Power
-Schall Oil Fuel
+KS Power & Schall Oil Fuel
+-Two unrelated mods I have integrated to each other in this pack. KS Power adds a Diesel Fuel that I have edited for this modpack to be intended for use as vehicle fuel. All of the variations for power generation added by KS Power are welcome additions to the modpack's themes a well.
 
 Planes:
 Aircraft
@@ -32,19 +33,9 @@ Aircraft Realism
 Changes:
 -Only the new fuel type, which was not automatically integrated by Schall Oil Fuel.
 
-Vehicles/Trucks:
-AAI Programmable Vehicles
-AAI Vehicles Hauler
-AAI Vehicles Miner
-AAI Vehicles Warden
-AAI Vehicles Ironclad
-Hovercrafts
-
-Changes:
--No custom changes, but considered core to the transportation theme.
-
 Island World Necessities:
 Jetpack
+Hovercrafts
 Long Reach
 Underwater Pipes
 Remote Configuration
@@ -52,5 +43,3 @@ Ballistic Missile
 Big Brother
 
 Island generation script is modified off of Freight Forwarding, but does not rely on it as a dependency.
-
-AAI Industry is a recommended but not required light overhaul mod that plays well with the mod pack. AAI Industry's fuel packs are disabled by default, as there is already custom fuel added, but that is the only integration.
