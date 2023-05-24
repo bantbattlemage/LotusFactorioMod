@@ -11,7 +11,7 @@ data:extend({
 	},
 })
 
---- re-call SchallOilFuel functions to add KS Power diesel fuel. below code is all just SchallOilFuel, calling to add properties to other mods
+--- re-call SchallOilFuel function to add KS Power Diesel Fuel as burnable barrel fuel. below code is almost all just SchallOilFuel, calling to add properties to planes which are ignored by the default "chemical" fuel category check
 
 local OFlib = require("__SchallOilFuel__.lib.OFlib")
 local cfg1 = require("__SchallOilFuel__.config.config-1")
@@ -48,11 +48,12 @@ local function fuel_settings_apply(name, specs)
   end
 end
 
---- diesel fuel is intended to have higher energy storage than rocket fuel but lacks the extra speed bonus. nuclear fuel is just better still
+--- diesel fuel is rebalanced to be intended to have better energy storage than rocket fuel to encourage use in vehicles, but lacks the extra speed bonus rocket fuel has. nuclear fuel is just better still
+--- AAI processed fuel is disabled by default as it doesn't have spent fuel while the barrel use in diesel is intended as an additiona logistic need. AAI fuel can simply be enabled in the settings if desired
 new_fuel = {
 
    ["diesel-fuel"] = {
-    fuel_value = "3MJ",
+    fuel_value = "4MJ",
     fuel_emissions_multiplier = 0.75,
     common = {
       fuel_category = "chemical",
@@ -73,13 +74,7 @@ for name, specs in pairs(new_fuel) do
   fuel_settings_apply(name, specs)
 end
 
-planes = {
-    gunship = "gunship",
-    cargo_plane = "cargo_plane",
-    jet = "jet",
-    flying_fortress = "flying_fortress"
-}
-
+--  apply burner inventory to all cars (because planes get ignored by a check in SOF)
 for name, v2 in pairs(dr["car"]) do
   local burner = v2.burner or v2.energy_source
   if burner then
