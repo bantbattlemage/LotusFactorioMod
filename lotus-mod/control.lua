@@ -36,3 +36,18 @@ function regulateOil(e)
       end
     return count
 end
+
+--  add fuel barrels as jetpack fuel
+function get_jetpack_fuels()
+    local fuel_list = 
+    {
+	    ["crude-oil-barrel"] = 1.0,
+	    ["light-oil-barrel"] = 1.0,
+	    ["heavy-oil-barrel"] = 1.0,
+	    ["petroleum-gas-barrel"] = 1.0,
+	    ["diesel-fuel-barrel"] = 1.0,
+    }
+    return fuel_list
+end
+
+remote.add_interface("lotus-jetpack-fuels", { jetpack_fuels = get_jetpack_fuels })

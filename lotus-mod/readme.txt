@@ -25,12 +25,14 @@ Integrated Mods with changes made:
 **Advanced Autonomous Industries** is fully enabled as dependencies but no changes have been made to it. Everything this fantastic set of mods does plays into what this modpack is trying to do. The only slight change is the Fuel Processing from AAI is set to be disabled by default, as this modpack intends you to use Diesel Fuel for your vehicles before getting Nuclear Fuel.
 
 **Cargo Ships**: Ships & Offshore Oil
+Changes:
 -Offshore power poles are disabled.
--Land oil is enabled by default, with the large Cargo Ship and Oil Tanker both locked behind Chemical Science.
+-Land oil is enabled by default, with the large Cargo Ship and Oil Tanker both locked behind Chemical Science. Red/Green science still gets you the basic Boat and techs for building Waterways and Ports.
 -Offshore oil is greatly reduced in frequency due to the huge number of water chunks in Lotus Island World's map generation, and to make finding it not quite so trivial (It's still not rare)
 -Offshore oil has been given an autoplace control in the map generation, allowing adjustment of it's frequency and abundance independent of land oil.
 
 **Resource Generation Overhaul**: Balancing Resource Distribution
+Changes:
 -Settings are customized to make sure islands aren't overly abundant/diverse with resources or overly barren.
 -Oil in the starting area is disabled.
 
@@ -40,9 +42,9 @@ Changes:
 -Diesel fuel is rebalanced to be intended to have better energy storage than rocket fuel to encourage use in vehicles, but lacks the extra speed bonus rocket fuel has.
 -AAI Processed Fuel is disabled by default, use of Diesel Fuel is intended. AAI fuel can simply be enabled in the settings if desired
 -1 stack of Solid Fuel = 600 MJ
--1 stack of Rocket Fuel = 1000 MJ
+-1 stack of Rocket Fuel = 1000 MJ, unchanged from vanilla. It is worse than Diesel Fuel Barrel with slightly less fuel density per stack, but retains not having any spent fuel output.
 -1 stack of Diesel Fuel Barrel = 1150 MJ and same speed/acceleration properties as Rocket Fuel, but with Empty Barrels as spent fuel.
--1 stack of Nuclear Fuel = 1210 MJ + Better speed/acceleration than Diesel Fuel (vanilla energy & speed/acceleration values).
+-1 stack of Nuclear Fuel = 1210 MJ and better speed/acceleration than Diesel Fuel (vanilla energy & speed/acceleration values). Outputs Spent Fuel Cells as spent fuel.
 
 **Nuclear Fuel**: Add slight complexity to nuclear fuel production.
 Changes:
@@ -52,12 +54,15 @@ Changes:
 Changes:
 -Only the new fuel type, which was not automatically integrated by Schall Oil Fuel.
 
+**Jetpack**: Hop around short distances without the need for a vehicle.
+Changes:
+-Added diesel barrel & oil fuel barrels as valid Jetpack fuels.
+
 Island World Necessities:
 **Simple Landfill Mining** and **CanalBuilder Simplified**: Make landfill removable (does not recover the landfill item), adds a placable waterfill.
 **Long Reach**: Don't try placng waterways without this, please.
 **Remote Configuration**: Very convienent on a large map.
 **Underwater Pipes**: Self-explanatory.
-**Jetpack**: Hop around without needing to get into a vehicle.
 **Hovercrafts**: An all-terrain-vehicle for islands.
 **Big Brother**: Upgrade radar to chart the vast ocean.
 **Ballistic Missile**: Artillery doesn't cut it.
