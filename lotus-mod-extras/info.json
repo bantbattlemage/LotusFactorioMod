@@ -1,0 +1,19 @@
+{
+  "name": "lotus-mod-extras",
+  "version": "0.1.0",
+  "title": "Lotus Islands World Extra Mods",
+  "author": "LotusCobra",
+  "factorio_version": "1.1",
+  "description": "Extra mods for Lotus Islands World modpack that aren't necessary but that I consider nice.",
+  "dependencies": [
+    "base >= 1.1",
+    "resourcehighlighter-dark",
+    "ClearSkiesOfPeace",
+    "Milestones",
+    "puppy-jetpack-ui",
+    "alien-biomes",
+    "DeadlockLargerLamp",
+    "DeadlockBlackRubberBelts",
+    "WireShortcuts"
+  ]
+}
