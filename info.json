@@ -1,7 +1,7 @@
 {
   "name": "lotus-mod",
   "version": "0.1.2",
-  "title": "Lotus Mod",
+  "title": "Lotus Islands World",
   "author": "LotusCobra",
   "factorio_version": "1.1",
   "description": "A collection of mods with some slight customization to create a core gameplay around long-distance logistics with a variety of vehicle types on a huge island world. Largely leaning on Cargo Ships & Advanced Autonomous Industries with a map generator tailored for large diverse islands.",
@@ -29,6 +29,7 @@
     "ballistic_missile",
     "DeadlockLargerLamp",
     "far-reach",
-    "RemoteConfiguration"
+    "RemoteConfiguration",
+    "Nuclear Fuel"
   ]
 }
