@@ -121,3 +121,13 @@ for name, v2 in pairs(dr["car"]) do
     burner.burnt_inventory_size = burner.fuel_inventory_size
   end
 end
+
+--  apply burner inventory to all burner generators
+for name, v2 in pairs(dr["burner-generator"]) do
+  local burner = v2.burner or v2.energy_source
+  if burner then
+    burner.burnt_inventory_size = burner.fuel_inventory_size
+  end
+end
+
+--dr["burner-generator"].burner.burnt_inventory_size = dri["big-burner-generator"].burner.fuel_inventory_size

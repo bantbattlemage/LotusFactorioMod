@@ -1,11 +1,10 @@
 
 --- Lotus Mod Values
 
-local island_scale = 10 --- default value is 1.7 * 15 for some reason
-local island_frequency = 1 --- default value 2
-local water_level = -80 --- default value -60, lower value is more water. 0 is ceiling for no water
-local empty_radius = 300 --- default value 700. radius around starting island that generation will avoid placing land. made lower because starting island is made much smaller, and water level is higher.
-
+local start_island_scale = 0.05 --- default value is 1.7 * 15 for some reason
+local island_frequency = 1.2 --- default value 2
+local water_level = -90 --- default value -60, lower value is more water. 0 is ceiling for no water
+local empty_radius = 275 --- default value 700. radius around starting island that generation will avoid placing land. made lower because starting island is made much smaller, and water level is higher.
 
 data.raw["map-gen-presets"]["default"]["lotus_island"] = {
   order = ".1",
@@ -279,7 +278,7 @@ local function IS_make_lakes(x, y, tile, map, options)
   }
 
 
-  local starting_plateau = starting_plateau_basis + starting_plateau_bias + map.finite_water_level * IS_wlc_mult - tile.distance / (island_scale)
+  local starting_plateau = starting_plateau_basis + starting_plateau_bias + map.finite_water_level * IS_wlc_mult - tile.distance / (start_island_scale * map.starting_area_radius)
 
   -- Set elevation to -4.5 in a radius around the center so that any generated continents don't merge with the starting island.
 
