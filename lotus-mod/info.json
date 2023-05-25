@@ -8,8 +8,8 @@
   "dependencies": [
     "base >= 1.1",
     "?lotus-mod-extras",
-    "nach0_modpack_aai",
-    "aai-pv-crafting-group",
+    "?nach0_modpack_aai",
+    "?aai-pv-crafting-group",
     "cargo-ships",
     "rso-mod",
     "simple_landfill_mining",
