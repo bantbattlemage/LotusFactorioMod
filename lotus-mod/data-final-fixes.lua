@@ -9,7 +9,7 @@ data:extend({
         frequency = true,
         size = true, --- this cant be removed so we have to use size for richness
         order = "d-e"
-	},
+	}
 })
 
 -- add blue science requirement to the large boats

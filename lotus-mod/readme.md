@@ -28,7 +28,8 @@ A collection of mods with some slight customization to create a core gameplay ar
 **Notes**
 
 * AAI Industry, which is not required, is the only mod in the pack that changes any vanilla recipes. If you exclude this, it should be compatible with most other mods.
-* If you do want the AI vehicles make sure to include the AAI Modpock. (listed as an optional dependency) If you do not want AAI Industry (the one that changes base game recipes), you can disable just that one mod and the parent modpack. All the AAI Modpack does is enable the other AAI mods, you don't need to have it on.
+* If you want the AI vehicles make sure to include the **Advanced Autonomous Vehicles** modpack in the optional dependencies. This pack is all of the AAI mods **except** AAI Industry. If you want to only include some of these, just disable the vehicles modpack and pick which ones you want.
+* If you want the recipe changes that make the early game and Red/Green science a bit tougher and things overall slightly more expensive, enable the **AAI Industry** optional dependency.
 
 **Integrated Mods with full list of changes made**
 

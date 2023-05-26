@@ -1,6 +1,6 @@
 {
   "name": "lotus-mod",
-  "version": "0.1.11",
+  "version": "0.2.1",
   "title": "Lotus Islands World",
   "author": "LotusCobra",
   "factorio_version": "1.1",
@@ -9,6 +9,7 @@
     "base >= 1.1",
     "?lotus-mod-extras",
     "?advanced-autonomous-vehicles",
+    "?aai-industry",
     "aai-signal-transmission",
     "cargo-ships",
     "rso-mod",
