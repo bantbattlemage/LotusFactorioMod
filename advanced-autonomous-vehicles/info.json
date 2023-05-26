@@ -1,0 +1,28 @@
+{
+  "name": "advanced-autonomous-vehicles",
+  "version": "1.0.0",
+  "title": "Advanced Autonomous Vehicles",
+  "author": "LotusCobra",
+  "factorio_version": "1.1",
+  "description": "A modpack of Earendel's AAI mods minus the Industries part. This mod does nothing but enable other mods.",
+  "dependencies": [
+    "base >= 1.1",
+    "aai-containers",
+    "aai-loaders",
+    "aai-programmable-structures",
+    "aai-programmable-vehicles",
+    "aai-signals",
+    "aai-signal-transmission",
+    "aai-vehicles-chaingunner",
+    "aai-vehicles-flame-tank",
+    "aai-vehicles-flame-tumbler",
+    "aai-vehicles-hauler",
+    "aai-vehicles-ironclad",
+    "aai-vehicles-laser-tank",
+    "aai-vehicles-miner",
+    "aai-vehicles-warden",
+    "aai-zones",
+    "aai-pv-crafting-group",
+    "glutenfree-aai-signal-transmission-preview"
+  ]
+}

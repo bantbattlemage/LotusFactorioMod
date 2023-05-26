@@ -8,6 +8,9 @@ function regulateOil(e)
       return 0
     end
 
+    local baseDeepOilRemovalChance = 0.92 --- yes, minimum amount of pffshore oil removed is 92%. its comical how much there is
+    local landOilNerfRate = 0.5
+
     local surface = e.surface
     local area = e.area
 
@@ -16,9 +19,9 @@ function regulateOil(e)
     local chanceToDestroyDeepOil = 0
 
     if(surface.map_gen_settings.autoplace_controls) then
-      chanceToDestroyDeepOil = 0.9 - math.abs(((1 - surface.map_gen_settings.autoplace_controls["deep_oil"].frequency) * 0.1))
+      chanceToDestroyDeepOil = baseDeepOilRemovalChance - math.abs(((1 - surface.map_gen_settings.autoplace_controls["deep_oil"].frequency) * 0.1))
       if chanceToDestroyDeepOil <= 0 then chanceToDestroyDeepOil = 0 end
-      if chanceToDestroyDeepOil >= 1 then chanceToDestroyDeepOil = 0.95 end
+      if chanceToDestroyDeepOil >= 1 then chanceToDestroyDeepOil = 0.99 end
     end
 
   --  reduce frequency of cargo ship's deep oil spawns, otherwise adjust by control amount
@@ -32,7 +35,7 @@ function regulateOil(e)
 
     --  nerf land oil abundance
       for _, deposit in pairs(vanilla_deposits) do
-        deposit.amount = deposit.amount * 0.5
+        deposit.amount = deposit.amount * landOilNerfRate
       end
     return count
 end

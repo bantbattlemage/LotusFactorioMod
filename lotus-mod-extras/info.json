@@ -1,19 +1,31 @@
 {
   "name": "lotus-mod-extras",
-  "version": "0.1.0",
-  "title": "Lotus Islands World Extra Mods",
+  "version": "0.2.0",
+  "title": "Lotus QoL Modpack",
   "author": "LotusCobra",
   "factorio_version": "1.1",
-  "description": "Extra mods for Lotus Islands World modpack that aren't necessary but that I consider nice.",
+  "description": "Extra mods I want to always play with. Mostly for myself to turn on easily.",
   "dependencies": [
     "base >= 1.1",
     "resourcehighlighter-dark",
-    "ClearSkiesOfPeace",
     "Milestones",
     "puppy-jetpack-ui",
-    "alien-biomes",
     "DeadlockLargerLamp",
     "DeadlockBlackRubberBelts",
-    "WireShortcuts"
+    "WireShortcuts",
+    "bullet-trails",
+    "even-distribution",
+    "extended-descriptions",
+    "Fill4Me",
+    "Infinizoom",
+    "light-overhaul",
+    "queue-to-front-button",
+    "RailSignalPlanner",
+    "RateCalculator",
+    "Tapeline",
+    "TintedGhosts",
+    "tiny-production-ui",
+    "Train_Control_Signals",
+    "TrainGroups"
   ]
 }
