@@ -9,8 +9,8 @@ local empty_radius = 275 --- default value 700. radius around starting island th
 data.raw["map-gen-presets"]["default"]["lotus_island"] = {
   order = ".1",
   basic_settings = {
-    terrain_segmentation = 0.75,  -- Inverse of Water Scale
-    water = 1.33,  -- Water Coverage
+    terrain_segmentation = "low", --0.75,  -- Inverse of Water Scale
+    water = "high", --1.33,  -- Water Coverage
 
     property_expression_names = {
       elevation = "lotus_island_world",

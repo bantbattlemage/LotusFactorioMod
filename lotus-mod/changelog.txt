@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+Date: 05-25-2023
+  Changes:
+    - Reverting unintended change made in previous commit of RGO area size from 10 to 12.
+    - Changed mapgen values from numbers to string values that are used for mapgen to try to fix issue where map thinks settings are not default after loading into a map and then loading a new map, but it doesn't seem to have fixed it. Seems better to use these string values though so keeping this changes.
+---------------------------------------------------------------------------------------------------

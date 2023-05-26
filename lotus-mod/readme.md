@@ -17,28 +17,39 @@ A collection of mods with some slight customization to create a core gameplay ar
 * Refine oil into Diesel Fuel, and used it to power your generators and your vehicles before obtaining nuclear power. Fuel your hungry ships, planes, trucks, and trains with efficient refined Diesel Fuel, but the barrel it is stored in is output as spent fuel.
 * Finally, unlock the Ballistic Missile Silo to exterminate island natives from afar.
 
--
+**Custom Features/Changes**
 
-Integrated Mods with changes made:
+* Tweaked terrain and resource geneneration scripts to create an interesting island world with distributed resources and decent distance between islands, as well as a guarenteed tiny starting island with limited resources.
+* Starting island size is controllable by "Starting Area Size" slider in the "Enemy" tab in the map settings.
+* Added a control slider for Offshore Oil in the map generator independent of normal Oil. This is hacky, but it works at a basic level.
+* Diesel Fuel, originally from KS Fuel mod that adds fuel burners that take oil, has been fully integrated with Schall Oil Fuel mod that turns Oil Barrels into burnable fuel and custom-balanced for use as vehicle fuel. Diesel Fuel Barrels are efficient to use as fuel for vehicles, but it has Empty Barrels as spent fuel output. To go in line with this, Nuclear Fuel has been given Spent Fuel Cells as spent fuel output as well.
+* Most other changes are just integrating this new fuel type into the rest of the mod.
 
+**Notes**
 
-**Advanced Autonomous Industries** is fully enabled as dependencies but no changes have been made to it. Everything this fantastic set of mods does plays into what this modpack is trying to do. The only slight change is the Fuel Processing from AAI is set to be disabled by default, as this modpack intends you to use Diesel Fuel for your vehicles before getting Nuclear Fuel.
+* AAI Industry, which is not required, is the only mod in the pack that changes any vanilla recipes. If you exclude this, it should be compatible with most other mods.
+* If you do want the AI vehicles make sure to include the AAI Modpock. (listed as an optional dependency) If you do not want AAI Industry (the one that changes base game recipes), you can disable just that one mod and the parent modpack. All the AAI Modpack does is enable the other AAI mods, you don't need to have it on.
+
+**Integrated Mods with full list of changes made**
+
+**Advanced Autonomous Industries**
+* Not required but it is recommended to play with at least the mining+hauler vehicles and the signals.Left none of it as a dependency so you can enable/disable whichever parts you like.
 
 **Cargo Ships**: Ships & Offshore Oil
-Changes:
+* Changes:
 -Offshore power poles are disabled.
--Land oil is enabled by default, with the large Cargo Ship and Oil Tanker both locked behind Chemical Science. Red/Green science still gets you the basic Boat and techs for building Waterways and Ports.
+-Land oil is enabled by default, and Oil Rigs are set to requie Chemical Science.
+-Added Chemical Science requirement to the large Cargo Ship and Oil Tanker. Red/Green science still gets you the basic Boat and techs for building Waterways and Ports.
 -Offshore oil is greatly reduced in frequency due to the huge number of water chunks in Lotus Island World's map generation, and to make finding it not quite so trivial (It's still not rare)
 -Offshore oil has been given an autoplace control in the map generation, allowing adjustment of it's frequency and abundance independent of land oil.
 
 **Resource Generation Overhaul**: Balancing Resource Distribution
-Changes:
+* Changes:
 -Settings are customized to make sure islands aren't overly abundant/diverse with resources or overly barren.
 -Oil in the starting area is disabled.
 
 **KS Power** & **Schall Oil Fuel**: Uses for oil as a power source, both for energy and vehicle fuel.
--Two unrelated mods I have integrated to each other in this pack. KS Power adds a Diesel Fuel that I have edited for this modpack to be intended for use as vehicle fuel. All of the variations for power generation added by KS Power are welcome additions to the modpack's themes a well.
-Changes:
+* Changes: 
 -Diesel fuel is rebalanced to be intended to have better energy storage than rocket fuel to encourage use in vehicles, but lacks the extra speed bonus rocket fuel has.
 -AAI Processed Fuel is disabled by default, use of Diesel Fuel is intended. AAI fuel can simply be enabled in the settings if desired
 -1 stack of Solid Fuel = 600 MJ
@@ -47,18 +58,18 @@ Changes:
 -1 stack of Nuclear Fuel = 1210 MJ and better speed/acceleration than Diesel Fuel (vanilla energy & speed/acceleration values). Outputs Spent Fuel Cells as spent fuel.
 
 **Nuclear Fuel**: Add slight complexity to nuclear fuel production.
-Changes:
+* Changes:
 -Vanilla Nuclear Fuel (which Nuclear Fuel mod doesn't change) now outputs Spent Fuel Cells when used as burner fuel. 
 
 **Aircraft & Aircraft Realism**: Programmable planes that require takeoff/landing space.
-Changes:
+* Changes:
 -Only the new fuel type, which was not automatically integrated by Schall Oil Fuel.
 
 **Jetpack**: Hop around short distances without the need for a vehicle.
-Changes:
+* Changes:
 -Added diesel barrel & oil fuel barrels as valid Jetpack fuels.
 
-Island World Necessities:
+* **Island World Necessities**:
 **Simple Landfill Mining** and **CanalBuilder Simplified**: Make landfill removable (does not recover the landfill item), adds a placable waterfill.
 **Long Reach**: Don't try placng waterways without this, please.
 **Remote Configuration**: Very convienent on a large map.
@@ -66,5 +77,6 @@ Island World Necessities:
 **Hovercrafts**: An all-terrain-vehicle for islands.
 **Big Brother**: Upgrade radar to chart the vast ocean.
 **Ballistic Missile**: Artillery doesn't cut it.
+**AAI Signal Transmission**: Send signals across islands.
 
 Island generation script is modified off of Freight Forwarding, but does not rely on it as a dependency.
