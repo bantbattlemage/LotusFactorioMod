@@ -33,9 +33,11 @@ A collection of mods with some slight customization to create a core gameplay ar
 **Integrated Mods with full list of changes made**
 
 **Advanced Autonomous Industries**
+
 * Not required but it is recommended to play with at least the mining+hauler vehicles and the signals.Left none of it as a dependency so you can enable/disable whichever parts you like.
 
 **Cargo Ships**: Ships & Offshore Oil
+
 * Changes:
 -Offshore power poles are disabled.
 -Land oil is enabled by default, and Oil Rigs are set to requie Chemical Science.
@@ -44,13 +46,15 @@ A collection of mods with some slight customization to create a core gameplay ar
 -Offshore oil has been given an autoplace control in the map generation, allowing adjustment of it's frequency and abundance independent of land oil.
 
 **Resource Generation Overhaul**: Balancing Resource Distribution
+
 * Changes:
 -Settings are customized to make sure islands aren't overly abundant/diverse with resources or overly barren.
 -Oil in the starting area is disabled.
 
 **KS Power** & **Schall Oil Fuel**: Uses for oil as a power source, both for energy and vehicle fuel.
+
 * Changes: 
--Diesel fuel is rebalanced to be intended to have better energy storage than rocket fuel to encourage use in vehicles, but lacks the extra speed bonus rocket fuel has.
+-Diesel fuel is rebalanced to be intended to have better energy storage than rocket fuel to encourage use in vehicles.
 -AAI Processed Fuel is disabled by default, use of Diesel Fuel is intended. AAI fuel can simply be enabled in the settings if desired
 -1 stack of Solid Fuel = 600 MJ
 -1 stack of Rocket Fuel = 1000 MJ, unchanged from vanilla. It is worse than Diesel Fuel Barrel with slightly less fuel density per stack, but retains not having any spent fuel output.
@@ -58,25 +62,36 @@ A collection of mods with some slight customization to create a core gameplay ar
 -1 stack of Nuclear Fuel = 1210 MJ and better speed/acceleration than Diesel Fuel (vanilla energy & speed/acceleration values). Outputs Spent Fuel Cells as spent fuel.
 
 **Nuclear Fuel**: Add slight complexity to nuclear fuel production.
+
 * Changes:
 -Vanilla Nuclear Fuel (which Nuclear Fuel mod doesn't change) now outputs Spent Fuel Cells when used as burner fuel. 
 
 **Aircraft & Aircraft Realism**: Programmable planes that require takeoff/landing space.
+
 * Changes:
 -Only the new fuel type, which was not automatically integrated by Schall Oil Fuel.
 
 **Jetpack**: Hop around short distances without the need for a vehicle.
+
 * Changes:
 -Added diesel barrel & oil fuel barrels as valid Jetpack fuels.
 
-* **Island World Necessities**:
-**Simple Landfill Mining** and **CanalBuilder Simplified**: Make landfill removable (does not recover the landfill item), adds a placable waterfill.
-**Long Reach**: Don't try placng waterways without this, please.
-**Remote Configuration**: Very convienent on a large map.
-**Underwater Pipes**: Self-explanatory.
-**Hovercrafts**: An all-terrain-vehicle for islands.
-**Big Brother**: Upgrade radar to chart the vast ocean.
-**Ballistic Missile**: Artillery doesn't cut it.
-**AAI Signal Transmission**: Send signals across islands.
+**Island World Necessities**:
+
+* **Simple Landfill Mining** and **CanalBuilder Simplified**: Make landfill removable (does not recover the landfill item), adds a placable waterfill.
+
+* **Long Reach**: Don't try placng waterways without this, please.
+
+* **Remote Configuration**: Very convienent on a large map.
+
+* **Underwater Pipes**: Self-explanatory.
+
+* **Hovercrafts**: An all-terrain-vehicle for islands.
+
+* **Big Brother**: Upgrade radar to chart the vast ocean.
+
+* **Ballistic Missile**: Artillery doesn't cut it.
+
+* **AAI Signal Transmission**: Send signals across islands.
 
 Island generation script is modified off of Freight Forwarding, but does not rely on it as a dependency.
