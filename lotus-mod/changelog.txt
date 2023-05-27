@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 05. 26. 2023
+  Changes:
+    - Sigh, *actually* fixed default settings of AAI Miner this time.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 05. 26. 2023
+  Changes:
+    - Fixed default settings of AAI Miner to not have one at the start as intended. (Still able to toggle back on your own in settings.)
+    - Fixed folder name from previous commit.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 05. 26. 2023
   Changes:
